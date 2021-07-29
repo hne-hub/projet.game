@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/dice-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    position: relative;
+    height: 100vh;
+    color: black;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.player-0-panel, .player-1-panel {
+    width: 50%;
+    float: left;
+    height: 500px;
+    padding: 90px;
+}
+
+
+
+.player-name {
+    font-size: 40px;
+    text-align : center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #f15b3b;
+    margin-bottom: 100px;
+}
+
+.active {
+    background-color: #f8f8fa;
+}
+
+.active .player-name {
+    font-weight: 300;
+}
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: orange;
+    top: -7px;
+    right: 10px;
+}
+
+.player-current-box {
+    background-color: #f15b3b;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: black;
+}
+
+.play-current-score {
+    font-size: 50px;
+}
+
+button {
+    position: absolute;
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.5s, color 0.5s;
+    border: none;
+}
+
+button:hover {
+    font-weight: bold;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: black;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new {
+    top: 45px;
+}
+
+.btn-roll {
+    top: 410px;
+}
+
+.btn-hold {
+    top: 460px;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
